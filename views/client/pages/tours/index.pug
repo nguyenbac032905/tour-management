@@ -1,9 +1,11 @@
-doctype html
-html 
-    head 
-        title Danh sach tour 
-    body 
-        h1 danh sach tour 
+extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
+
+block main 
+    .container.my-3
+        .row 
+            .col-12 
+                +box-head("Danh sach tour")
         ul  
             each item in tours 
                 li #{item.title}
