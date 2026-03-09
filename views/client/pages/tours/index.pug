@@ -6,6 +6,14 @@ block main
         .row 
             .col-12 
                 +box-head("Danh sach tour")
-        ul  
-            each item in tours 
-                li #{item.title}
+        .row
+            each item in tours
+                .col-6.mb-3
+                    .card
+                        img.card-img-top(src=item.image)
+                    .card-body
+                        h5.card-title= item.title
+                        h6.mr-2.mb-2= item.specialPrice.toLocaleString() + 'đ'
+                        del.mb-2= item.price.toLocaleString() + 'đ'
+                        p.font-weight-bold Giảm #{item.discount}%
+                        a.btn.btn-primary(href=`/tours/detail/${item.slug}`) Xem chi tiết

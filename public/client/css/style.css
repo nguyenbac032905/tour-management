@@ -67,3 +67,165 @@ body{
     text-align:center;
     padding:20px 0;
 }
+
+/* ===== TOUR DETAIL ===== */
+
+.tour-detail {
+  background: #f7f7f7;
+}
+
+/* ===== RIGHT SIDE INFO ===== */
+
+.tour-detail .inner-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.tour-detail .inner-barcode,
+.tour-detail .inner-time-start,
+.tour-detail .inner-stock {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.tour-detail i {
+  margin-right: 8px;
+  color: #0d6efd;
+}
+
+/* ===== PRICE ===== */
+
+.tour-detail .inner-price-special {
+  font-size: 30px;
+  font-weight: 700;
+  color: #e53935;
+  margin-top: 15px;
+}
+
+.tour-detail .inner-price {
+  font-size: 18px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.tour-detail .inner-price del {
+  color: #999;
+}
+
+/* ===== DISCOUNT ===== */
+
+.tour-detail .inner-percent {
+  display: inline-block;
+  background: #ff5722;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* ===== ADD TO CART ===== */
+
+.tour-detail .form-add-to-cart {
+  margin-top: 20px;
+}
+
+.tour-detail .form-add-to-cart input {
+  width: 120px;
+}
+
+.tour-detail .btn-success {
+  width: 220px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ===== INFO BOX ===== */
+
+.tour-detail .inner-infomation {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid #eee;
+}
+
+.tour-detail .inner-label {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tour-detail .inner-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
