@@ -3,6 +3,10 @@ include ../../mixins/box-head.pug
 include ../../mixins/moment.pug
 
 block main
+    div(
+        class="alert alert-success alert-hidden"
+        alert-add-cart-success 
+    ) Đã thêm vào giỏ hàng <span close-alert>x</span>
     .tour-detail
         .container.my-3
             .row
@@ -45,7 +49,7 @@ block main
 
                     .inner-percent Giảm tới #{tourDetail.discount} %
 
-                form.form-add-to-cart(method="POST")
+                form.form-add-to-cart(method="POST" tour-id=tourDetail.id)
                     input.form-control.mb-2(
                         type="number"
                         name="quantity"
@@ -54,8 +58,7 @@ block main
                         max=tourDetail.stock
                     )
 
-                    button.btn.btn-success.btn-block(type="submit")
-                    | Thêm vào giỏ hàng
+                    button.btn.btn-success.btn-block(type="submit") Thêm vào giỏ hàng
 
             .row
                 .col-12

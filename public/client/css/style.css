@@ -229,3 +229,28 @@ body{
       height: 100%;
       object-fit: cover;
     }
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* nút đóng */
+[close-alert]{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* class ẩn */
+.alert-hidden{
+    display: none;
+}
