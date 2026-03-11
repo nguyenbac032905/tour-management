@@ -11,6 +11,8 @@ dotenv.config();
 const app: Express = express();
 const port: number = Number(process.env.PORT);
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 clientRoutes(app);
 adminRoutes(app);
 app.locals.prefixAdmin = systemConfig.PATH_ADMIN;
