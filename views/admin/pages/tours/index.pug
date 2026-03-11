@@ -1,0 +1,55 @@
+extends ../../layouts/default.pug
+block main
+    h1 Danh sách tour
+    .card.mb-3
+        .card-header Danh sách tour
+        .card-body
+            .row 
+                .col-8
+                .col-4
+                    a.btn.btn-outline-success(href=`${prefixAdmin}/tours/create`) Thêm mới
+
+            table(class="table table-hover table-sm")
+                thead
+                    tr
+                        th STT
+                        th Hình ảnh
+                        th Tiêu đề
+                        th Gía
+                        th Giảm giá
+                        th Gía đặc biệt
+                        th Còn lại 
+                        th Vị trí
+                        th Trạng thái
+                        th Hành động
+                tbody
+                    each item,index in tours
+                        tr
+                            td #{index}
+                            td 
+                                img(src=item.image width="100px" height="auto")
+                            td #{item.title}
+                            td #{item.price}
+                            td #{item.discount}
+                            td #{item.priceSpecial}
+                            td #{item.stock}
+                            td #{item.position}
+                            td 
+                                if(item.status === "active")
+                                    a(href="javascript:;" class = "badge badge-success") Hoạt động
+                                else
+                                    a(href="javascript:;" class = "badge badge-dange") Dừng hoạt động
+                            td 
+                                a.btn.btn-secondary.btn-sm(
+                                    href=`/${prefixAdmin}/tours/detail/${item.id}`
+                                ) Chi tiết
+
+                                a.btn.btn-warning.btn-sm.ml-1(
+                                    href=`/${prefixAdmin}/tours/edit/${item.id}`
+                                ) Sửa
+
+                                button.btn.btn-danger.btn-sm.ml-1(
+                                    button-delete
+                                    data-id=item.id
+                                ) Xóa
+                            
