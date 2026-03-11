@@ -22,6 +22,8 @@ app.locals.moment = moment;
 app.set("views", "./views");
 app.set("view engine", "pug");
 
+app.use("/tinymce", express.static(path.join(__dirname, "node_modules", "tinymce")));
+
 app.use(express.static(path.join(__dirname,"public")));
 
 app.listen(port, () => {

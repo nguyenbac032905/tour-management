@@ -73,7 +73,22 @@ block main
                 id="timeStart"
                 name="timeStart"
             )
-
+        .form-group 
+            lable(for="information") Thông tin tour
+            textarea(
+                class="form-control textarea-mce"
+                id="information"
+                name="information"
+                textarea-mce
+            )
+        .form-group 
+            lable(for="schedule") Lịch trình tour
+            textarea(
+                class="form-control textarea-mce"
+                id="schedule"
+                name="schedule"
+                textarea-mce
+            )
         .form-group
             label(for="position") Vị trí
             input.form-control(
