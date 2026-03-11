@@ -1,0 +1,62 @@
+extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
+
+block main
+    .container.my-3
+        .row
+            .col-12
+                +box-head(pageTitle)
+            .col-12
+                table.table.table-bordered(table-tour-info)
+                    thead
+                        tr
+                        th STT
+                            th Ảnh
+                            th Tiêu đề
+                            th Giá
+                            th Số lượng
+                            th Tổng tiền
+                            th Hành động
+                    tbody
+            .col-12
+                h5.text-right.mb-4
+                | Tổng đơn hàng: 
+                span(total-price) 0₫
+
+        .row
+            .col-12
+                +box-head("Thông tin khách hàng")
+
+                form(form-order)
+                    .form-group
+                        label(for="fullName") Họ tên
+                        input.form-control(
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        required
+                        )
+
+                    .form-group
+                        label(for="phone") Số điện thoại
+                        input.form-control(
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        required
+                        )
+
+                    .form-group
+                        label(for="note") Ghi chú
+                        textarea.form-control(
+                        id="note"
+                        name="note"
+                        rows="2"
+                        )
+
+                    .form-group
+                        button.btn.btn-success.btn-block(
+                        type="submit"
+                        ) ĐẶT TOUR
+block script 
+    script(src="/client/js/cart.js")

@@ -6,4 +6,4 @@ import * as controller from "../../controllers/client/tour.controller";
 router.get("/:slugCategory", controller.index);
 router.get("/detail/:slugTour", controller.detail);
 
-export default router
+export default router;

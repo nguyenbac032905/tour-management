@@ -1,6 +1,8 @@
 import express,{Express} from "express";
 import dotenv from "dotenv";
 import clientRoutes from "./routes/client/index.route";
+import adminRoutes from "./routes/admin/index.route";
+import systemConfig from "./config/systemConfig";
 import path from "path";
 import moment from "moment";
 
@@ -8,7 +10,10 @@ dotenv.config();
 
 const app: Express = express();
 const port: number = Number(process.env.PORT);
+app.use(express.json());
 clientRoutes(app);
+adminRoutes(app);
+app.locals.prefixAdmin = systemConfig.PATH_ADMIN;
 
 app.locals.moment = moment;
 
